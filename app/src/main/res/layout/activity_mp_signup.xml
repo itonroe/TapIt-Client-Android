@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkg"
+    tools:context=".MP_Signup">
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="22dp"
+        android:layout_height="21dp"
+        android:background="@drawable/btn_back_ico_green"
+        android:onClick="btn_Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="167dp"
+        android:layout_height="55dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.118"
+        app:srcCompat="@drawable/logo_text" />
+
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="11dp"
+        android:background="@drawable/btn_signup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.782" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="69dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/lbl_login"
+            android:text="@string/log_in"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:onClick="btn_Login"
+            android:layout_marginStart="6dp"
+            android:layout_toEndOf="@+id/lbl_login" />
+
+        <TextView
+            android:id="@+id/lbl_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already_have_an_account"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <!-- USERNAME INPUT -->
+    <RelativeLayout
+        android:id="@+id/username"
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:background="@drawable/borders"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.461">
+
+        <!-- INPUT -->
+        <EditText
+            android:id="@+id/txt_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-8dp"
+            android:layout_toRightOf="@+id/txt_username_ico"
+            android:background="@null"
+            android:hint="@string/username"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:layout_marginStart="-8dp"
+            android:layout_toEndOf="@+id/txt_username_ico"
+            android:importantForAutofill="no" />
+
+        <!-- ICON -->
+        <ImageView
+            android:id="@+id/txt_username_ico"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/username_ico"
+            android:padding="3dp"
+            android:src="@drawable/user_ico" />
+
+    </RelativeLayout>
+
+    <!-- PASSWORD INPUT -->
+    <RelativeLayout
+        android:id="@+id/email"
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:background="@drawable/borders"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintVertical_bias="0.04">
+
+        <!-- INPUT -->
+        <EditText
+            android:id="@+id/txt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-8dp"
+            android:layout_toEndOf="@+id/txt_email_ico"
+            android:layout_toRightOf="@+id/txt_email_ico"
+            android:background="@null"
+            android:hint="@string/email"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:layout_marginStart="-8dp" />
+
+        <!-- ICON -->
+        <ImageView
+            android:id="@+id/txt_email_ico"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/email_ico"
+            android:padding="3dp"
+            android:src="@drawable/email_ico" />
+
+    </RelativeLayout>
+    <!-- PASSWORD INPUT -->
+    <RelativeLayout
+        android:id="@+id/password"
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:background="@drawable/borders"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintVertical_bias="0.054">
+
+        <!-- INPUT -->
+        <EditText
+            android:id="@+id/txt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-8dp"
+            android:layout_toEndOf="@+id/txt_password_ico"
+            android:layout_toRightOf="@+id/txt_password_ico"
+            android:background="@null"
+            android:hint="@string/password"
+            android:importantForAutofill="no"
+            android:inputType="textWebPassword"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:layout_marginStart="-8dp" />
+
+        <!-- ICON -->
+        <ImageView
+            android:id="@+id/txt_password_ico"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/password_ico"
+            android:padding="3dp"
+            android:src="@drawable/password_ico" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
